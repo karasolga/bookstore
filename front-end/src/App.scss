@@ -1,0 +1,14 @@
+@import './styles/variables.module.scss';
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.app {
+  padding: $padding;
+}
+
+h2, h4 {
+  margin: 0;
+}

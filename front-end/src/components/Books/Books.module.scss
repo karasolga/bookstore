@@ -1,0 +1,33 @@
+@import '../../styles/variables.module.scss';
+
+.table {
+  border: 1px solid $cellBorderColor;
+}
+
+.row {
+  display: flex;
+  border-top: 1px solid $cellBorderColor;
+
+  &:first-of-type {
+    border-top: none;
+  }
+}
+
+.col {
+  flex: 1;
+  border-right: 1px solid $cellBorderColor;
+  padding: $padding / 2;
+
+  &:last-of-type {
+    border-color: transparent;
+  }
+
+  @media screen and (max-width: $md) {
+    font-size: $font-small;
+   }
+}
+
+.title {
+  font-weight: bold;
+  padding: $padding / 2;
+}

@@ -1,0 +1,103 @@
+@import '../../styles/variables.module.scss';
+
+.card {
+  border: 1px solid $borderColor;
+  margin: 2 * $padding 0;
+  border-radius: calc($padding / 2);
+  padding: 2 * $padding 3 * $padding;
+
+  @media screen and (max-width: $md) {
+   padding: $padding;
+  }
+}
+
+.row {
+  display: flex;
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $padding;
+}
+
+.image {
+  width: 150px;
+  height: 140px;
+  margin-right: 3 * $padding;
+  border-radius: 75px;
+  overflow: hidden;
+
+  @media screen and (max-width: $md) {
+    margin-right: 0;
+    margin-bottom: 3 * $padding;
+    width: 120px;
+    height: 110px;
+    border-radius: 60px;
+    align-self: center;
+  }
+}
+
+.image img {
+  width: 150px;
+  height: 140px;
+  object-fit: cover;
+ 
+  @media screen and (max-width: $md) {
+    margin-right: 0;
+    margin-bottom: 3 * $padding;
+    width: 120px;
+    height: 110px;
+  }
+}
+
+.content {
+  flex: 1;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2 * $padding;
+
+  & span {
+    font-size: $font-small;
+  }
+}
+
+.footerInfo {
+  flex: 1;
+}
+
+.link {
+  text-decoration: none;
+  font-size: $font-small;
+  color: $black;
+}
+
+.linkText {
+  display: inline;
+  @media screen and (max-width: $md) {
+   display: none;
+  }
+}
+
+.linkIcon {
+  display: inline;
+  @media screen and (min-width: $md) {
+   display: none;
+  }
+}
+
+.flag {
+  max-width: 30px;
+  height: 20px;
+}
